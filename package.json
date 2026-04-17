@@ -1,0 +1,44 @@
+{
+  "name": "mediscan",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Upload, view and analyze MRI and CT scans with our powerful web-based DICOM viewer.",
+  "author": "Aayush Pandey",
+  "license": "",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-packager . MediScan --platform=win32 --arch=x64 --overwrite",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2",
+    "electron-rebuilder": "^1.0.2"
+  },
+  "build": {
+    "appId": "com.pits.viewer",
+    "productName": "pits",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "sqlite3": "^5.1.7"
+  }
+}
