@@ -1,0 +1,18 @@
+Copyright © 2026 Aayush Pandey
+
+All Rights Reserved.
+
+This software and all associated source code, documentation,models, and assets are proprietary.
+
+Permission is granted to use this software only as expressly authorized by the copyright owner.
+
+You may not:
+- Copy or redistribute the software
+- Modify or create derivative works
+- Reverse engineer, decompile, or disassemble the software
+- Sell, sublicense, or transfer the software
+- Remove copyright notices
+
+The software is provided "as is" without warranty of any kind.
+
+For licensing inquiries, contact: aayush4373pandey@gmail.com
