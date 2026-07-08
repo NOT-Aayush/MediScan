@@ -9,7 +9,7 @@ The application provides an intuitive interface for loading CT images, segmentin
 ## 📷 Screenshot
 
 <p align="center">
-  <img src="screenshots/mediscan.png" alt="MediScan Screenshot" width="900"/>
+  <img width="1913" height="1016" alt="image" src="https://github.com/user-attachments/assets/d8ab20d5-01e8-4279-9860-36425ffcf79f" />
 </p>
 
 ---
