@@ -1,89 +1,144 @@
-🧠 MediScan – Medical Imaging Analysis Tool
-📌 Overview
+# 🩺 MediScan
 
-MediScan is a cross-platform desktop application that processes medical images (DICOM and standard formats) to perform automated fat and muscle tissue segmentation using a multi-stage image processing pipeline.
+MediScan is a desktop medical imaging application built with Electron.js and Python that processes DICOM CT scans to estimate muscle and fat composition using classical image processing techniques.
 
-It combines computer vision, medical imaging standards, and an interactive UI to enable efficient analysis and visualization of clinical data.
+The application provides an intuitive interface for loading CT images, segmenting anatomical regions, and visualizing body composition metrics.
 
-🚀 Features
-📂 Multi-format Support
-Handles DICOM, JPG, PNG, and BMP images
-🧪 7-Stage Image Processing Pipeline
-Includes:
-DICOM parsing with rescale slope/intercept
-Noise reduction (Non-Local Means denoising)
-Thresholding (Otsu’s method)
-Intensity-based segmentation
-Bone exclusion & tissue isolation
-📊 Automated Tissue Analysis
-Extracts key metrics:
-Fat area
-Muscle area
-Fat-to-muscle ratio
-Intensity ranges
-🖼️ Interactive Editing Tool
-Region of Interest (ROI) selection
-Canvas-based editing
-Undo/Redo functionality
-💾 Structured Data Storage
-SQLite database storing:
-10+ clinical parameters per scan
-Associated processed images
-📈 Visualization Outputs
-Generates multiple processed views to improve interpretability
-🛠️ Tech Stack
-Frontend / Desktop UI: Electron.js
-Backend Processing: Python
-Computer Vision: OpenCV
-Medical Imaging: pydicom
-Data Handling: NumPy, scikit-image
-Database: SQLite
-🧩 System Architecture
-[ User Interface (Electron) ]
-            ↓
-   Image Upload / Selection
-            ↓
-[ Python Processing Pipeline ]
-   → Preprocessing
-   → Segmentation
-   → Feature Extraction
-            ↓
-[ SQLite Database ]
-            ↓
-   Results + Visualizations
-            ↓
-[ UI Display & Editing ]
-📸 How It Works
-User uploads a medical image (DICOM or standard format)
-Image is passed to the Python processing pipeline
-Segmentation identifies fat and muscle regions
-Clinical metrics are calculated and stored
-Results are displayed with interactive visualization tools
-⚙️ Setup & Run
-# Clone repository
-git clone https://github.com/your-username/mediscan
+---
 
-# Install dependencies (frontend)
-cd mediscan
-npm install
+## 📷 Screenshot
 
-# Run Electron app
-npm start
-# Install Python dependencies
-pip install -r requirements.txt
+<p align="center">
+  <img src="screenshots/mediscan.png" alt="MediScan Screenshot" width="900"/>
+</p>
 
-# Run processing module (if separate)
-python process_image.py
-🎯 Use Cases
-Medical imaging research
-Educational tools for radiology
-Prototype clinical analysis systems
-Image segmentation experimentation
-📌 Future Improvements
-Real-time processing optimization
-Cloud-based deployment
-Advanced ML-based segmentation
-Multi-user data management
-⚠️ Disclaimer
+---
 
-This project is for educational and research purposes only and is not intended for clinical diagnosis.
+## ✨ Features
+
+- 📂 Import DICOM CT scans
+- 🩻 Automatic DICOM image rendering
+- 🧠 Muscle segmentation
+- 🟡 Fat tissue segmentation
+- 📊 Body composition analysis
+- 🎨 Segmentation mask visualization
+- ⚡ Desktop application built with Electron
+- 💾 Local SQLite database support
+
+---
+
+## 🛠️ Tech Stack
+
+### Desktop
+- Electron.js
+- HTML
+- CSS
+- JavaScript
+
+### Image Processing
+- Python
+- OpenCV
+- NumPy
+- SciPy
+- scikit-image
+- pydicom
+- Pillow
+
+### Database
+- SQLite
+
+---
+
+## Image Processing Pipeline
+
+```
+DICOM CT Scan
+      │
+      ▼
+Load Image (pydicom)
+      │
+      ▼
+Preprocessing
+(Windowing & Normalization)
+      │
+      ▼
+Noise Reduction
+      │
+      ▼
+Thresholding
+      │
+      ▼
+Morphological Operations
+      │
+      ▼
+Connected Component Analysis
+      │
+      ▼
+Muscle & Fat Segmentation
+      │
+      ▼
+Area Calculation
+      │
+      ▼
+Visualization
+```
+
+---
+
+## Project Structure
+
+```
+MediScan
+├── electron/
+├── python/
+│   ├── segmentation.py
+│   ├── dicom_preview.py
+│   └── utils.py
+├── database/
+└── README.md
+```
+
+---
+
+## Core Libraries
+
+- OpenCV
+- pydicom
+- NumPy
+- SciPy
+- scikit-image
+- Pillow
+- Electron.js
+
+---
+
+## What I Learned
+
+This project helped me gain experience with:
+
+- Medical image processing
+- DICOM file handling
+- Computer vision techniques
+- Morphological image operations
+- Electron desktop application development
+- Python integration with Electron
+- SQLite database management
+
+---
+
+## Future Improvements
+
+- Deep Learning–based segmentation
+- 3D CT volume visualization
+- Automatic report generation
+- PACS integration
+- Multi-patient management
+- Cross-platform installer
+
+---
+
+## Author
+
+**Aayush Pandey**
+
+Portfolio: https://aayushpandey.in
